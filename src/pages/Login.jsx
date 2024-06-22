@@ -1,5 +1,4 @@
 import React from 'react';
-import { Box, Button, Center, FormControl, FormLabel, Input, VStack } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
@@ -10,21 +9,19 @@ const Login = () => {
   };
 
   return (
-    <Center height="100vh">
-      <Box width="sm" p={6} boxShadow="lg" borderRadius="md">
-        <VStack spacing={4}>
-          <FormControl id="email">
-            <FormLabel>Email address</FormLabel>
-            <Input type="email" />
-          </FormControl>
-          <FormControl id="password">
-            <FormLabel>Password</FormLabel>
-            <Input type="password" />
-          </FormControl>
-          <Button colorScheme="blue" width="full" onClick={handleLogin}>Login</Button>
-        </VStack>
-      </Box>
-    </Center>
+    <div className="flex items-center justify-center h-screen">
+      <div className="w-full max-w-sm p-6 shadow-lg rounded-md">
+        <div className="mb-4">
+          <label className="block text-sm font-medium mb-1" htmlFor="email">Email address</label>
+          <input className="w-full px-3 py-2 border rounded-md" type="email" id="email" />
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-medium mb-1" htmlFor="password">Password</label>
+          <input className="w-full px-3 py-2 border rounded-md" type="password" id="password" />
+        </div>
+        <button className="w-full py-2 bg-blue-500 text-white rounded-md" onClick={handleLogin}>Login</button>
+      </div>
+    </div>
   );
 };
 
