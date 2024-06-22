@@ -1,31 +1,34 @@
 import React from 'react';
-import { Box, Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react';
 import HomeFragment from './HomeFragment';
 import CartFragment from './CartFragment';
 import SearchFragment from './SearchFragment';
 
 const Home = () => {
   return (
-    <Box p={4}>
-      <Tabs variant="soft-rounded" colorScheme="blue">
-        <TabList>
-          <Tab>Home</Tab>
-          <Tab>Cart</Tab>
-          <Tab>Search</Tab>
-        </TabList>
-        <TabPanels>
-          <TabPanel>
+    <div className="p-4">
+      <div className="tabs">
+        <input type="radio" id="tab1" name="tab-control" defaultChecked />
+        <input type="radio" id="tab2" name="tab-control" />
+        <input type="radio" id="tab3" name="tab-control" />
+        <ul>
+          <li title="Home"><label htmlFor="tab1" role="button"><span>Home</span></label></li>
+          <li title="Cart"><label htmlFor="tab2" role="button"><span>Cart</span></label></li>
+          <li title="Search"><label htmlFor="tab3" role="button"><span>Search</span></label></li>
+        </ul>
+        <div className="slider"><div className="indicator"></div></div>
+        <div className="content">
+          <section>
             <HomeFragment />
-          </TabPanel>
-          <TabPanel>
+          </section>
+          <section>
             <CartFragment />
-          </TabPanel>
-          <TabPanel>
+          </section>
+          <section>
             <SearchFragment />
-          </TabPanel>
-        </TabPanels>
-      </Tabs>
-    </Box>
+          </section>
+        </div>
+      </div>
+    </div>
   );
 };
 

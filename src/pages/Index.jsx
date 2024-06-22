@@ -1,6 +1,4 @@
-// Update this page (the content is just a fallback if you fail and example)
-// Use chakra-ui
-import { Container, Text, VStack } from "@chakra-ui/react";
+import React from 'react';
 
 // Example of using react-icons
 // import { FaRocket } from "react-icons/fa";
@@ -8,12 +6,10 @@ import { Container, Text, VStack } from "@chakra-ui/react";
 
 const Index = () => {
   return (
-    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <VStack spacing={4}>
-        <Text fontSize="2xl">Your Blank Canvas</Text>
-        <Text>Chat with the agent to start making edits.</Text>
-      </VStack>
-    </Container>
+    <div className="flex flex-col items-center justify-center h-screen">
+      <div className="text-2xl mb-4">Your Blank Canvas</div>
+      <div>Chat with the agent to start making edits.</div>
+    </div>
   );
 };
 
