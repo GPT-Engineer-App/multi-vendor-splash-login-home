@@ -44,7 +44,7 @@ const Home = () => {
           icon={<FaSearch />}
           aria-label="Search"
           onClick={() => setSelectedTab('search')}
-          isActive={selectedTab === 'search')}
+          isActive={selectedTab === 'search'}
         />
       </Flex>
     </Flex>
